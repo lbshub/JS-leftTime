@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+
+	<style>
+		
+		h3{font-size: 18px;margin-bottom: 5px;}
+		div{margin-bottom: 20px;}
+		
+		.demo{font-size: 16px;}
+		.demo span{background: #868686; color: #fff; padding: 3px 5px; border-radius: 5px;}
+		.demo b{background: #f30; color: #fff; padding: 3px 5px; border-radius: 5px;}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- demo1 -->
+	<h3>1. 天时分秒</h3>
+	<div class="demo" id="demo1">8000</div>
+
+	<!-- demo2 -->
+	<h3>2. 天时分</h3>
+	<div class="demo" id="demo2">62000</div>
+
+	<!-- demo3 -->
+	<h3>3. 时分秒</h3>
+	<div class="demo" id="demo3">70000</div>
+
+	<!-- demo4 -->
+	<h3>4. 时分秒 带标签</h3>
+	<div class="demo" id="demo4">75000</div>
+
+	<!-- demo5 -->
+	<h3>5. 时分秒 时分秒用冒号表示</h3>
+	<div class="demo" id="demo5">80000</div>
+
+	<!-- demo6 -->
+	<h3>6. 时分秒 时分秒用冒号表示 带标签</h3>
+	<div class="demo" id="demo6">88000</div>
+
+	<p>-------------------------(时)显示为大于24小时的值----------------</p>
+
+	<!-- demo7 -->
+	<h3>7. 时分秒</h3>
+	<div class="demo" id="demo7">188888000</div>
+
+	<!-- demo8 -->
+	<h3>8. 时分秒 带标签</h3>
+	<div class="demo" id="demo8">83888000</div>
+
+	<!-- demo9 -->
+	<h3>9. 时分秒 时分秒用冒号表示</h3>
+	<div class="demo" id="demo9">288888000</div>
+
+	<!-- demo10 -->
+	<h3>10. 时分秒 时分秒用冒号表示 带标签</h3>
+	<div class="demo" id="demo10">208888000</div>
+	
+	<script type="text/javascript" src="timeLeft.js"></script>
+	<script type="text/javascript">
+		
+		//demo1 
+		var demo1 = document.getElementById('demo1');
+		timeLeft({
+			el: demo1,
+			mode: 1,
+			after: function(){
+				console.log('1 天时分秒 测试结束!');
+			}
+		});
+
+		//demo2
+		var demo2 = document.getElementById('demo2');
+		timeLeft({
+			el: demo2,
+			mode: 2,
+			after: function(){
+				console.log('2 天时分 测试结束!');
+			}
+		});
+
+		//demo3
+		var demo3 = document.getElementById('demo3');
+		timeLeft({
+			el: demo3,
+			mode: 3,
+			after: function(){
+				console.log('3 时分秒 测试结束!');
+			}
+		});
+
+		//demo4
+		var demo4 = document.getElementById('demo4');
+		timeLeft({
+			el: demo4,
+			mode: 4,
+			after: function(){
+				console.log('4 时分秒(带标签) 测试结束!');
+			}
+		});
+
+		//demo5
+		var demo5 = document.getElementById('demo5');
+		timeLeft({
+			el: demo5,
+			mode: 5,
+			after: function(){
+				console.log('5 时分秒(时分秒用冒号表示) 测试结束!');
+			}
+		});
+
+		//demo6
+		var demo6 = document.getElementById('demo6');
+		timeLeft({
+			el: demo6,
+			mode: 6,
+			tag: 'b',
+			after: function(){
+				console.log('6 时分秒(时分秒用冒号表示 带标签) 测试结束!');
+			}
+		});
+
+		// -----------------------------------------------------
+
+		//demo7
+		var demo7 = document.getElementById('demo7');
+		timeLeft({
+			el: demo7,
+			mode: 3,
+			than24: true,
+			after: function(){
+				console.log('7 时分秒 测试结束!');
+			}
+		});
+
+		//demo8
+		var demo8 = document.getElementById('demo8');
+		timeLeft({
+			el: demo8,
+			mode: 4,
+			than24: true,
+			after: function(){
+				console.log('8 时分秒(带标签) 测试结束!');
+			}
+		});
+
+		//demo9
+		var demo9 = document.getElementById('demo9');
+		timeLeft({
+			el: demo9,
+			mode: 5,
+			than24: true,
+			after: function(){
+				console.log('9 时分秒(时分秒用冒号表示) 测试结束!');
+			}
+		});
+
+		//demo10
+		var demo10 = document.getElementById('demo10');
+		timeLeft({
+			el: demo10,
+			mode: 6,
+			tag: 'b',
+			than24: true,
+			after: function(){
+				console.log('10 时分秒(时分秒用冒号表示 带标签) 测试结束!');
+			}
+		});
+
+	</script>
+	
+</body>
+</html>
